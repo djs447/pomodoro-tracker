@@ -3,6 +3,26 @@
   height: 100vh;
 }
 
+body{
+  --color-background: #fafafa;
+  --color-text: #fafafa;
+  height: 100vh;
+  overflow: hidden;
+}
+body.dark{
+  --color-background: #1f2023;
+  --color-text: #1f2023;
+}
+
+body.dark{
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+span.dark{
+  color: #fafafa;
+}
+
 .container{
   display: flex;
   flex-direction: column;
@@ -70,41 +90,16 @@ button:hover{
   margin: 20px;
 }
 
-.outer-bar{
-  height: 320px;
-  width: 320px;
-  padding: 40px;
-  box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15), -6px -6px 10px -1px rgba(255,255,255,0.7);
-  border-radius: 50%;
+.controls{
+  margin: 10px;
+  width: 40px;
 }
 
-.inner-bar {
-  height: 240px;
-  width: 240px;
-
-  border-radius: 50%;
-  box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
-   inset -4px -4px 6px -1px rgba(255,255,255,0.7),
-   -0.5px -0.5px 0px rgba(255,255,255,1),
-   0.5px 0.5px 0px rgba(0,0,0,0.15),
-   0px 12px 10px -10px rgba(0,0,0,0.05);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.middle-text{
+  position: absolute;
+  font-size: 44px;
 }
 
 circle{
-  fill: none;
-  stroke-width: 40px;
-}
-
-.progress-bar{
-  position: relative;
-  top: -280px;
-  left: -40px;
-}
-
-.controls{
-  margin: 0 10px 0 10px;
-  width: 40px;
+  stroke-dashoffset: 0;
 }
